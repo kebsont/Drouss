@@ -6,14 +6,15 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14088"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Library View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Dourouss" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LibraryViewController" customModule="Dourouss" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -93,12 +94,11 @@
                                     <rect key="frame" x="0.0" y="0.0" width="100" height="120"/>
                                     <autoresizingMask key="autoresizingMask"/>
                                     <subviews>
-                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="dcz-1x-dIC">
-                                            <rect key="frame" x="0.0" y="0.0" width="100" height="104"/>
-                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="wh" translatesAutoresizingMaskIntoConstraints="NO" id="dcz-1x-dIC">
+                                            <rect key="frame" x="0.0" y="0.0" width="100" height="96"/>
                                         </imageView>
-                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8W-zz-Gi3">
-                                            <rect key="frame" x="0.0" y="102" width="100" height="18"/>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Waqana Hakan" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="r8W-zz-Gi3">
+                                            <rect key="frame" x="0.0" y="90" width="100" height="30"/>
                                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                             <nil key="textColor"/>
                                             <nil key="highlightedColor"/>
@@ -106,7 +106,14 @@
                                     </subviews>
                                 </view>
                                 <constraints>
+                                    <constraint firstItem="r8W-zz-Gi3" firstAttribute="top" secondItem="Rkp-JO-E39" secondAttribute="topMargin" constant="82" id="FuR-10-5Z0"/>
                                     <constraint firstAttribute="bottom" secondItem="r8W-zz-Gi3" secondAttribute="bottom" id="IXv-dv-suk"/>
+                                    <constraint firstItem="r8W-zz-Gi3" firstAttribute="leading" secondItem="dcz-1x-dIC" secondAttribute="leading" id="OBT-nD-jjg"/>
+                                    <constraint firstItem="r8W-zz-Gi3" firstAttribute="trailing" secondItem="dcz-1x-dIC" secondAttribute="trailing" id="VuJ-t8-2wh"/>
+                                    <constraint firstAttribute="bottomMargin" secondItem="dcz-1x-dIC" secondAttribute="bottom" constant="16" id="gyP-5y-IBM"/>
+                                    <constraint firstItem="r8W-zz-Gi3" firstAttribute="leading" secondItem="Rkp-JO-E39" secondAttribute="leading" id="tU5-aH-ten"/>
+                                    <constraint firstItem="dcz-1x-dIC" firstAttribute="top" secondItem="Rkp-JO-E39" secondAttribute="top" id="ySJ-aU-S4I"/>
+                                    <constraint firstAttribute="trailing" secondItem="r8W-zz-Gi3" secondAttribute="trailing" id="yW7-Hk-oxU"/>
                                 </constraints>
                                 <connections>
                                     <outlet property="khassidaImage" destination="dcz-1x-dIC" id="knS-IR-tbW"/>
@@ -216,5 +223,6 @@
         <image name="book" width="32" height="32"/>
         <image name="shuffle-2" width="32" height="32"/>
         <image name="study" width="32" height="32"/>
+        <image name="wh" width="700" height="867"/>
     </resources>
 </document>

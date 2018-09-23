@@ -8,7 +8,7 @@
 
 import UIKit
 
-class LibraryViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource {
+class LibraryViewController: UIViewController {
     @IBOutlet var collectionView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
