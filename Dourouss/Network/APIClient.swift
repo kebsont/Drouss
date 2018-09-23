@@ -15,7 +15,7 @@ struct APIClient {
     
     static func getKhassidasAPI(completion: @escaping (KhassidaJSON?) -> Void) {
         
-        let url = URL(string: "https://url.json")
+        let url = URL(string: "url.json")
         
         let session = URLSession.shared
         

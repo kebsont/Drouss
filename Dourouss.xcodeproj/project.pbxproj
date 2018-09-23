@@ -9,11 +9,11 @@
 /* Begin PBXBuildFile section */
 		7D4BE67A2157F94D0018049D /* CollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D4BE6792157F94D0018049D /* CollectionViewCell.swift */; };
 		7D734BB52157FF6700F41DFF /* Khassida.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D734BB42157FF6700F41DFF /* Khassida.swift */; };
-		7D734BB7215801D900F41DFF /* LibraryCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D734BB6215801D900F41DFF /* LibraryCollectionViewController.swift */; };
 		7D734BBD215813DA00F41DFF /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D734BBC215813DA00F41DFF /* APIClient.swift */; };
 		7D734BBF2158147100F41DFF /* KhassidasData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D734BBE2158147100F41DFF /* KhassidasData.swift */; };
+		7D734BC121581E4600F41DFF /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D734BC021581E4600F41DFF /* LibraryViewController.swift */; };
+		7D734BC3215831F000F41DFF /* BaseTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D734BC2215831F000F41DFF /* BaseTabBarViewController.swift */; };
 		7D8D533B2154D44100300B46 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D533A2154D44100300B46 /* AppDelegate.swift */; };
-		7D8D533D2154D44100300B46 /* LibraryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7D8D533C2154D44100300B46 /* LibraryViewController.swift */; };
 		7D8D53402154D44100300B46 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8D533E2154D44100300B46 /* Main.storyboard */; };
 		7D8D53422154D44400300B46 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7D8D53412154D44400300B46 /* Assets.xcassets */; };
 		7D8D53452154D44400300B46 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7D8D53432154D44400300B46 /* LaunchScreen.storyboard */; };
@@ -23,12 +23,12 @@
 /* Begin PBXFileReference section */
 		7D4BE6792157F94D0018049D /* CollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollectionViewCell.swift; sourceTree = "<group>"; };
 		7D734BB42157FF6700F41DFF /* Khassida.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Khassida.swift; sourceTree = "<group>"; };
-		7D734BB6215801D900F41DFF /* LibraryCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryCollectionViewController.swift; sourceTree = "<group>"; };
 		7D734BBC215813DA00F41DFF /* APIClient.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIClient.swift; sourceTree = "<group>"; };
 		7D734BBE2158147100F41DFF /* KhassidasData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KhassidasData.swift; sourceTree = "<group>"; };
+		7D734BC021581E4600F41DFF /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
+		7D734BC2215831F000F41DFF /* BaseTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BaseTabBarViewController.swift; sourceTree = "<group>"; };
 		7D8D53372154D44100300B46 /* Dourouss.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Dourouss.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		7D8D533A2154D44100300B46 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		7D8D533C2154D44100300B46 /* LibraryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LibraryViewController.swift; sourceTree = "<group>"; };
 		7D8D533F2154D44100300B46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		7D8D53412154D44400300B46 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7D8D53442154D44400300B46 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -70,6 +70,7 @@
 				7D8D53432154D44400300B46 /* LaunchScreen.storyboard */,
 				7D4BE6792157F94D0018049D /* CollectionViewCell.swift */,
 				7D8D533E2154D44100300B46 /* Main.storyboard */,
+				7D734BC2215831F000F41DFF /* BaseTabBarViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -77,8 +78,7 @@
 		7D734BBB21580F3200F41DFF /* Controller */ = {
 			isa = PBXGroup;
 			children = (
-				7D734BB6215801D900F41DFF /* LibraryCollectionViewController.swift */,
-				7D8D533C2154D44100300B46 /* LibraryViewController.swift */,
+				7D734BC021581E4600F41DFF /* LibraryViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -186,11 +186,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7D734BC3215831F000F41DFF /* BaseTabBarViewController.swift in Sources */,
 				7D734BBF2158147100F41DFF /* KhassidasData.swift in Sources */,
-				7D8D533D2154D44100300B46 /* LibraryViewController.swift in Sources */,
 				7D734BB52157FF6700F41DFF /* Khassida.swift in Sources */,
-				7D734BB7215801D900F41DFF /* LibraryCollectionViewController.swift in Sources */,
 				7D8D533B2154D44100300B46 /* AppDelegate.swift in Sources */,
+				7D734BC121581E4600F41DFF /* LibraryViewController.swift in Sources */,
 				7D4BE67A2157F94D0018049D /* CollectionViewCell.swift in Sources */,
 				7D734BBD215813DA00F41DFF /* APIClient.swift in Sources */,
 			);

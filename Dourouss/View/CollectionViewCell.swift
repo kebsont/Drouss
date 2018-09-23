@@ -8,7 +8,7 @@
 
 import UIKit
 
-class CollectionViewCell: UICollectionViewCell {
+class CollectionViewCell:  UICollectionViewCell {    
     @IBOutlet var khassidaImage: UIImageView!
     @IBOutlet var khassidaLabel: UILabel!
     

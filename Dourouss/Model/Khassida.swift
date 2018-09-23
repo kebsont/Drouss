@@ -14,6 +14,6 @@ struct Khassida {
     
     init(dictionary: KhassidaJSON) {
         self.name = dictionary["name"] as! String
-        self.coverImage = dictionary["cover"] as! String
+        self.coverImage = dictionary["artworkUrl100"] as! String
     }
 }
