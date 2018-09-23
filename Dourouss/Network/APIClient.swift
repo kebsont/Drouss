@@ -15,7 +15,7 @@ struct APIClient {
     
     static func getKhassidasAPI(completion: @escaping (KhassidaJSON?) -> Void) {
         
-        let url = URL(string: "https://rss.itunes.apple.com/api/v1/us/apple-music/hot-tracks/all/50/explicit.json")
+        let url = URL(string: "https://url.json")
         
         let session = URLSession.shared
         
