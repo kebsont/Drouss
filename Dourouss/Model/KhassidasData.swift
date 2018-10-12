@@ -20,30 +20,48 @@ var images: [UIImage] = []
 func getKhassidas(completion: @escaping () -> Void) {
     
     APIClient.getKhassidasAPI { (json) in
-        let feed = json?["feed"] as? KhassidaJSON
-        if let results = feed?["results"] as? [KhassidaJSON] {
-            for dict in results {
-                let newKhassida = Khassida(dictionary: dict)
-                self.khassidas.append(newKhassida)
-            }
-            completion()
-        }
-    }
-}
+//        let img = json?["coverImage"] as? Khassida
+//        print(json?["coverImage"])
+        let url = URL(string: json?["coverImage"] as! String )
 
-func getKhassidasImages(completion: @escaping () -> Void) {
-    getKhassidas {
-        for khassaide in self.khassidas {
-            let url = URL(string: khassaide.coverImage)
-            let data = try? Data(contentsOf: url!)
-            if let imageData = data {
-                let image = UIImage(data: imageData)
-                self.images.append(image!)
-            }
+        let title = json?["title"] as? String
+        let data = try? Data(contentsOf: url!)
+        print("data: ", data)
+        if let imageData = data {
+                print("the image & title")
+            print(url!)
+            print(title!)
+            let image = UIImage(data: imageData)
+            self.images.append(image!)
+            let az = CollectionViewCell()
+            az.khassidaImage.image = image
+            print(self.images)
         }
-        OperationQueue.main.addOperation {
+        
+//        for dict in title {
+//                let newKhassida = Khassida(dictionary: dict)
+//                self.khassidas.append(newKhassida)
+//            }
+//            print(self.khassidas)
             completion()
         }
     }
 }
-}
+    
+
+//func getKhassidasImages(completion: @escaping () -> Void) {
+//    getKhassidas {
+//        for khassaide in self.khassidas {
+//            let url = URL(string: khassaide.coverImage)
+//            let data = try? Data(contentsOf: url!)
+//            if let imageData = data {
+//                let image = UIImage(data: imageData)
+//                self.images.append(image!)
+//            }
+//        }
+//        OperationQueue.main.addOperation {
+//            completion()
+//        }
+//    }
+//}
+//}

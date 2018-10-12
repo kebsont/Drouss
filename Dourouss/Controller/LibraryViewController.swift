@@ -17,7 +17,7 @@ class LibraryViewController: UIViewController, UICollectionViewDataSource, UICol
         
         
         // Register cell classes
-        store.getKhassidasImages {
+        store.getKhassidas {
             self.collectionVieww.reloadSections(IndexSet(integer: 0))
         }
     }
